@@ -1,11 +1,17 @@
+#!/usr/local/bin/python
+# -*- coding: utf-8 -*-
+
+# Basic Printing
 print("we're gonna do it")
 print('Hi'+'there')
 
+# Basic function
 def simple(num1,num2=5):
 	print(num1,num2)
 
 simple(5,6)
 
+# global variable
 x = 6
 
 def example():
@@ -16,24 +22,26 @@ def example():
 
 x = example()
 
+#python is a object-oriented programming
+# we can define a class
 class calculator:
-	def addition(x,y):
-		add=x+y
+	def __init__(self,x,y):
+		self.x = x
+		self.y = y
+
+	def addition(self):
+		add = self.x + self.y
 		print(add)
 
-	def subtraction(x,y):
-		sub=x-y
+	def subtraction(self):
+		sub =  self.x - self.y
 		print(sub)
 
-calculator.addition(3,5)
+cal = calculator(3,5)
+cal.addition()
 
-def epic():
-        print('wow this is great')
-
-if __name__=='__main__':
-        print('such a great module!')
-
-
+# The below code give examples of manipulating a list with number elements
+# if first time use statistics, you need to download the package first using pip install statistics
 import statistics as s
 ##from statistics import variance as v, mean as m
 ##from statistics import * #import everything
@@ -52,6 +60,7 @@ x.sort()
 
 print(x)
 
+# a list elment can also be a list
 # multi-demensional list
 x=[[5,6],[7,6],[8,7],2]
 
