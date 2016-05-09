@@ -1,10 +1,8 @@
 # This tutorial is best followed in a shell / command prompt.
 # Open yours up, type python, or python3, and then follow.
+# No problems for me to run in sublime2 on my mac
 import subprocess
 
-# Say you are on windows:
-# module  call command in the shell
-# you can change that if you'd like, eventually.
-# IF YOU ARE NOT IN A SHELL, YOU WILL SEE NO OUTPUT!
-subprocess.call('dir', shell=True)
-subprocess.call('echo dir', shell=True)
+# call the command line in python script directely
+subprocess.call('ls', shell=True)
+subprocess.call('echo $PATH', shell=True)

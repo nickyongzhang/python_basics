@@ -6,6 +6,7 @@ ftp.login(user='username', passwd = 'password')
 	
 ftp.cwd('/whyfix/')
 
+# retrieve a file from the ftp server
 def grabFile():
 
     filename = 'example.txt'
@@ -16,10 +17,12 @@ def grabFile():
     ftp.quit()
     localfile.close()
 
+# put a file on the ftp server
 def placeFile():
 
 	filename = 'exampleFile.txt'
 	ftp.storbinary('STOR '+filename, open(filename, 'rb'))
 	ftp.quit()
 
-placeFile()
+if __name__ == '__main__':
+	placeFile()

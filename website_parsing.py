@@ -1,21 +1,23 @@
-import urllib.request as ure
-import urllib.parse as urp
-import re
+import urllib
+import urllib2
+import re, time
 
 url = 'http://pythonprogramming.net'
 values = {'s':'basics',
           'submit': 'search'}
-data = urp.urlencode(values)
+data = urllib.urlencode(values)
 data = data.encode('utf-8')
-req  = ure.Request(url,data)
-resp = ure.urlopen(req)
+req  = urllib2.Request(url,data)
+resp = urllib2.urlopen(req)
 respData = resp.read()
 
-print(respData)
+# print(respData)
 
-paragraphs = re.findall(r'<p>(.&?)</p>', str(respData))
+# use (.&?) to match all the content
+paragraphs = re.findall(r'<p>(.*?)</p>', str(respData))
 
 for eachP in paragraphs:
 	print(eachP)
 
-input('press any key to exist!')
+# this is for user to see the output when excuting the executable
+time.sleep(15)

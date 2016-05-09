@@ -1,8 +1,0 @@
-import urllib2
-
-try:
-	x = urlib2.urlopen('http://pythonprogramming.net')
-
-	print x
-except Exception, e:
-	print(str(e))

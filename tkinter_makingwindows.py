@@ -1,4 +1,4 @@
-from tkinter import *
+from Tkinter import *
 
 from PIL import Image, ImageTk
 
@@ -15,10 +15,6 @@ class Window(Frame):
 		self.master.title('GUI')
 		self.pack(fill=BOTH, expand=1)
 
-		# quitButton = Button(self,text="Quit",command=self.clinet_exit)
-
-		# quitButton.place(x=0, y=0)
-        
         # define a menu
 		menu = Menu(self.master)
 		self.master.config(menu=menu)
@@ -28,6 +24,7 @@ class Window(Frame):
 		file.add_command(label = 'Exit', command=self.clinet_exit)
 		file.add_command(label = 'Save')
 		menu.add_cascade(label='File', menu=file)
+
         # create a edit button
 		edit = Menu(menu)
 		edit.add_command(label='Show Image', command=self.showImg)
