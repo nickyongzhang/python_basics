@@ -1,20 +1,20 @@
 class calculator:
-	def addition(x,y):
+	def addition(self,x,y):
             add=x+y
 	    print(add)
 	    
-	def subtraction(x,y):
+	def subtraction(self,x,y):
 	    sub=x-y
 	    print(sub)
 
-	def multiplication(x,y):
+	def multiplication(self,x,y):
             mult = x*y
             print(mult)
 
-    def division(x,y):
-            div = x/y
-            print(div)
+	def division(self,x,y):
+	        div = x/y
+	        print(div)
 
-calculator.multiplication(3,5)        
+calculator().multiplication(3,5)        
 
                   
