@@ -26,11 +26,8 @@ Introduce how to some directory manipulation methods:
  * os.rename: rename a folder  
  * os.remdir: remove a folder
 
-
-
 ### examplecsv.py 
 How to read a csv file in python
-
 
 ### matplotlib_module.py
 plot a line/bar/scatter from data or csv/text file
@@ -47,7 +44,6 @@ If you want to run this code, fulfill in your domain name and server ip
 
 ### urllib_module.py & website_parsing.py
 Use urllib and urllib2 package to read a url directly or through a request and scrap data from the website.
-
 
 ### threading_module.py
 Use Queue and threading to fake a multiple thread process
@@ -76,8 +72,6 @@ The idea of eval is to evaluate an expression in the form of a string and return
 
 ### exec_module.py
 exec built_in function can excute a lot of things directly. Kind of magic.
-
-
 
 ******************
 
